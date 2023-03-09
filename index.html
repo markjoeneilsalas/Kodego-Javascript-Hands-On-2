@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript2.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="GET" id="forma">
+        <input type="text" id="grade" name="grade"/>
+        <input type="submit" id="submit" value="PRESS" onclick="myGrading();"/>
+        </form>
+        <p id='grades'></p>
+<script>
+    function myGrading() {
+     var gscore;
+     var score = document.getElementById('grade').value
+     switch(true) {
+case (score <= 100 && score >= 90):
+   gscore = 'A';
+    break;
+case (score <= 89 && score >= 80):
+    gscore = 'B';
+     break;
+case (score <= 79 && score >= 70):
+    gscore = 'C';
+     break;
+   case (score <= 69 && score >= 60):
+    gscore = 'D';
+     break;
+case (score <= 59 && score >= 0):
+    gscore = 'F';
+    break;
+
+case (score > 100 && score < 0):
+    gscore = 'INVALID SCORE';
+    break; 
+default:
+  return 'INVALID SCORE';
+   }
+          document.getElementById('grades').innerHTML=gscore;
+
+
+   }
+
+</script>
+</body>
+</html>
